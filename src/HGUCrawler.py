@@ -7,18 +7,6 @@
 pip install webdriver-manager
 
 
-# In[370]:
-
-
-import requests
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from bs4 import BeautifulSoup as bs
-import time
- 
-
-
 # In[388]:
 
 
@@ -97,23 +85,4 @@ class HGUCrawler:
                 df = df.append(pd.DataFrame([row], columns=colName), ignore_index=True)
         
         return df
-
-
-# In[389]:
-
-
-HGU = HGUCrawler()
-
-
-# In[390]:
-
-
-driver = HGU.login("tlsgndi123", "tlsgn@5133")
-HGU.getCourseInfo(driver)
-
-
-# In[ ]:
-
-
-
 
