@@ -75,5 +75,5 @@ class Crawler:
             for row in data[i]:
                 df = df.append(pd.DataFrame([row], columns=colName), ignore_index=True)
         
-        return df
+        return df.to_html()
 
