@@ -13,15 +13,15 @@ class Crawler:
     def login(self, id: str, pw: str):
         hisnetURL ='https://hisnet.handong.edu/'
         id_input_path = '//*[@id="loginBoxBg"]/table[2]/tbody/tr/td[5]/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr[1]/td[2]/span/input'
-        #id_input_path = '//*[@id="loginBoxBg"]/table[2]/tbody/tr/td[5]/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr[1]/td[2]/span/input'
         password_input_path = '//*[@id="loginBoxBg"]/table[2]/tbody/tr/td[5]/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr[3]/td[2]/input'
         login_button = '//*[@id="loginBoxBg"]/table[2]/tbody/tr/td[5]/form/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input'
         
         driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
         driver.get(hisnetURL)
         time.sleep(5)
-        driver.find_element_by_xpath(id_input_path).send_keys(id) # id 넣기
-        driver.find_element_by_xpath(password_input_path).send_keys(pw) # password 넣기
+        driver.switch_to.frame("MainFrame")
+        driver.find_element_by_name("id").send_keys(id)
+        driver.find_element_by_name("password").send_keys(pw)
         driver.find_element_by_xpath(login_button).click()
 
         
@@ -29,12 +29,12 @@ class Crawler:
         time.sleep(5) #팝업창 로드 대기 5초 (매직 시간임. 네트워크 환경에 따라 충분하지 않을 수 있음)
 
         # 팝업창 종료
-        #main = driver.window_handles[0]
-        #pops = driver.window_handles[1:]
-        #for pop in pops:
-        #    driver.switch_to.window(pop)
-        #    driver.close()
-        #driver.switch_to.window(main)
+        main = driver.window_handles[0]
+        pops = driver.window_handles[1:]
+        for pop in pops:
+            driver.switch_to.window(pop)
+            driver.close()
+        driver.switch_to.window(main)
         
         return driver
     
