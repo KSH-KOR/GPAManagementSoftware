@@ -1,15 +1,10 @@
 <?php 
-function display()
-{
-    $make = 'python driver.py';
-    $id = $_POST['ID'];
-    $pw = $_POST['PASSWORD'];
-    $command = escapeshellcmd($make . ' ' . $id . ' ' . $pw);
-    $output = shell_exec($command);
-    echo $output;
-}
-if(isset($_POST['submit']))
-{
-   display();
-} 
+$make = 'python ../driver.py';
+$type = $_POST['type'];
+$weight = $_POST['weight'];
+$unit = $_POST['unit'];
+$command = escapeshellcmd($make . ' ' . $type . ' ' . $weight . ' ' . $unit);
+echo $command;
+$output = shell_exec($command . ' 2>&1 &');
+echo $output;
 ?>

@@ -2,34 +2,19 @@
 # coding: utf-8
 
 import sys
-from HGUCrawler import Crawler
-from wordpress_xmlrpc import Client, WordPressPost
-from wordpress_xmlrpc.methods.users import GetUserInfo
-from wordpress_xmlrpc.methods import posts
+from cat import catFoodInfo
+from post import post
 
-id = sys.argv[1]
-pw = sys.argv[2]
-c = Crawler()
-driver = c.login(id= id, pw= pw)
-content = c.getCourseInfo(driver)
+cat_type = sys.argv[1]
+cat_weight = sys.argv[2]
+weight_unit = sys.argv[3]
 
-client = Client('http://192.168.0.16/wp/xmlrpc.php', 'shinhoo', 'tlsgn5133')
-post = WordPressPost()
+cat_weight = float(cat_weight)
 
-post.title = 'Course Info'
-post.content = content
-post.mime_type = "text/html"
+cat = catFoodInfo()
+calorie = cat.getCalorie(cat_type, cat_weight, weight_unit)
+table = cat.displayTable()
 
-post.terms_names = {
-  'post_tag': ['html5', 'table'],
-  'category': ['Introductions', 'HTML5']
-}
-post.post_status = "publish"
-post_id = client.call(posts.NewPost(post))
-
-print ("Post with id ", post_id, "successfully published")
-
-# Getting list of posts
-published_posts = client.call(posts.GetPosts({'post_status': 'publish'}))
-print (published_posts)
-
+wp = post()
+wp.post(calorie, "Calorie")
+wp.post(table, "Calorie Table")

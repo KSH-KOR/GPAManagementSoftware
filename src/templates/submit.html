@@ -1,15 +1,25 @@
 <!doctype html>
 
-<form action="../exec_py.php" method="post">
+<form action="exec_py.php" method="post">
     <p>
-        <label for="login-ID">ID</label>
-        <input type="text" name="ID" placeholder="Hisnet ID" required="" id="login-ID">
-    </p>
+        <p>Choose your cat type:</p>
+        <input type="radio" id="neutered_or_spayed" name="type" value="neutered_or_spayed">
+        <label for="neutered_or_spayed">neutered or spayed</label><br>
+        <input type="radio" id="intact" name="type" value="intact">
+        <label for="intact">intact</label><br>
+        <input type="radio" id="prone_to_gaining_weight" name="type" value="prone_to_gaining_weight">
+        <label for="prone_to_gaining_weight">prone to gaining weight</label><br>
+        <input type="radio" id="Pet_in_need_of_weight_loss" name="type" value="Pet_in_need_of_weight_loss">
+        <label for="Pet_in_need_of_weight_loss">Pet in need of weight loss</label><br>
+        <p>Enter your cat weight:</p>
+        <label for="Type">weight</label>
+        <input type="text" name="weight" placeholder="weight" required="" id="weight"><br>
+        <p>Choose weight unit:</p>
+        <input type="radio" id="weight_in_kg" name="unit" value="weight_in_kg">
+        <label for="weight_in_kg">kg</label><br>
+        <input type="radio" id="weight_in_lbs" name="unit" value="weight_in_lbs">
+        <label for="weight_in_lbs">lbs</label><br>
     <p>
-        <label for="login-PASSWORD">Password</label>
-        <input type="text" name="PASSWORD" placeholder="Hisnet pw" required="" id="login-PASSWORD">
-    </p>
-  <p>
-        <input type="submit" value="Login">
+        <input type="submit" value="submit">
     </p>
   </form>
