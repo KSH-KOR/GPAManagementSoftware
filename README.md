@@ -1,6 +1,6 @@
 # CatFoodCalorieCalculator
 What does this project do? <br />
-&nbspThis software display how much amount of calorie your cat need to take depending on your cat's type and weight.
+>This software display how much amount of calorie your cat need to take depending on your cat's type and weight.
 
 Why is this project useful? <br />
     Feeding proper amount of food is very important for your cat's health. If you use this software, you can know how much you need to feed.
