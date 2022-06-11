@@ -23,7 +23,7 @@ How to get started?<br />
 >>>line 9: client = Client('your_wordpress_url', 'wordpress id', 'wordpress password')<br />
 >>>(for example: client = Client('http://localhost/wp/xmlrpc.php', 'id123', 'password123'))<br />
 6. get chat room to hear users' voice<br />
->git clone https://github.com/jerry10004/Chat-Room.git under cat_food directory<br />
+>sudo git clone https://github.com/jerry10004/Chat-Room.git under cat_food directory<br />
 >sudo chmod 666 Chat-Room/connection.php<br />
 >vim Chat-Room/connection.php<br />
 >enter your database information<br />
