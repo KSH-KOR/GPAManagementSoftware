@@ -1,14 +1,14 @@
 # CatFoodCalorieCalculator
-What does this project do? 
+What does this project do? <br />
     This software display how much amount of calorie your cat need to take depending on your cat's type and weight.
 
-Why is this project useful? 
+Why is this project useful? <br />
     Feeding proper amount of food is very important for your cat's health. If you use this software, you can know how much you need to feed.
 
-How to get started?
-    1.clone this github
-    2.put this folder on your server directory
-    1.install module
+How to get started?<br />
+    1.clone this github<br />
+    2.put this folder on your server directory<br />
+    1.install module<br />
         pip install os-sys (os-sys 2.1.4)
         pip install python-wordpress-xmlrpc (python-wordpress-xmlrpc 2.3)
         pip install pandas (pandas 1.4.2)
