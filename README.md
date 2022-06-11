@@ -25,6 +25,17 @@ How to get started?<br />
 6. run submit.html file which is located under cat_food\src\templates<br />
 7. or copy and paste submit.html script on your wordpress page as html script<br />
 >>and modify form action="exec_py.php directory"<br />
+<br />
+8. get chat room to hear users' voice<br />
+>git clone https://github.com/jerry10004/Chat-Room.git under cat_food directory<br />
+>sudo chmod 666 Chat-Room/connection.php<br />
+>vim Chat-Room/connection.php<br />
+>enter your database information<br />
+>sudo chmod 666 Chat-Room/index.php<br />
+>vim Chat-Room/index.php<br />
+>add the folling line in line 60<br />
+>header('Location: '.'../../wp/'); die();<br />
+<br />
 8. fill the html form as the instructions<br />
 9. check your wordpress post<br />
 
