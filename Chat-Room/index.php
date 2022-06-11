@@ -58,6 +58,8 @@
 				?>
 				<audio src='audio/notification.mp3' hidden='true' autoplay='true'/>
 				<?php
+				header('Location: '.'../../wp/');
+				die();
 			}
 		}
 	?>
