@@ -22,11 +22,7 @@ How to get started?<br />
 >>sudo vim post.py<br />
 >>>line 9: client = Client('your_wordpress_url', 'wordpress id', 'wordpress password')<br />
 >>>(for example: client = Client('http://localhost/wp/xmlrpc.php', 'id123', 'password123'))<br />
-6. run submit.html file which is located under cat_food\src\templates<br />
-7. or copy and paste submit.html script on your wordpress page as html script<br />
->>and modify form action="exec_py.php directory"<br />
-<br />
-8. get chat room to hear users' voice<br />
+6. get chat room to hear users' voice<br />
 >git clone https://github.com/jerry10004/Chat-Room.git under cat_food directory<br />
 >sudo chmod 666 Chat-Room/connection.php<br />
 >vim Chat-Room/connection.php<br />
@@ -36,8 +32,13 @@ How to get started?<br />
 >add the folling line in line 60<br />
 >header('Location: '.'../../wp/'); die();<br />
 <br />
-8. fill the html form as the instructions<br />
-9. check your wordpress post<br />
+7. run submit.html file which is located under cat_food\src\templates<br />
+8. or copy and paste submit.html script on your wordpress page as html script<br />
+>>and modify form action="exec_py.php directory"<br />
+<br />
+
+9. fill the html form as the instructions<br />
+10. check your wordpress post<br />
 
 Where can people get more help, if needed? Presentation Video (YouTube) Link<br />
   
