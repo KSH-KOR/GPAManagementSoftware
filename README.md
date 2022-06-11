@@ -18,8 +18,10 @@ How to get started?<br />
     4.copy the repository under your server directory (for example, under /var/www/html/)<br />
         sudo cp -R ./cat_food /usr/www/html/<br />
     5.edit post.py file<br />
-        line 9: client = Client('your_wordpress_url', 'wordpress id', 'wordpress password')<br />
-        (for example: client = Client('http://localhost/wp/xmlrpc.php', 'id123', 'password123'))<br />
+        sudo chmod 666 post.py<br />
+        sudo vim post.py<br />
+            line 9: client = Client('your_wordpress_url', 'wordpress id', 'wordpress password')<br />
+            (for example: client = Client('http://localhost/wp/xmlrpc.php', 'id123', 'password123'))<br />
     6-1.run submit.html file which is located under cat_food\src\templates<br />
     6-2.or copy and paste submit.html script on your wordpress page as html script<br />
         and modify form action="exec_py.php directory"<br />
