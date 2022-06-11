@@ -41,6 +41,11 @@ How to get started?<br />
 10. check your wordpress post<br />
 
 Where can people get more help, if needed? Presentation Video (YouTube) Link<br />
-  
-Clearly indicate what your contribution to your project is. (This is very important.)<br />
+>https://youtu.be/tQThT36zLfE <br />
+what my contribution to this project. <br />
+1. create post.py
+2. create driver.py
+3. create cat.py
+4. create submit.html
+5. create exec_py.php
   
